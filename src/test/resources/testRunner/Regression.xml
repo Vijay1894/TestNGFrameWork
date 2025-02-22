@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestNG Smoke Testing" verbose="3" parallel="tests" thread-count="3">
+
+
+<listeners>
+
+      <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
+      
+</listeners>
+
+	<test name="LoginPage Test">
+	
+		<classes>
+			<class name="com.qa.opencart.test.LoginpageTest" />
+		</classes>
+	</test>
+	
+	
+		<test name="Homepage Test">
+	
+		<classes>
+			<class name="com.qa.opencart.test.HomePageTest" />
+		</classes>
+	</test>
+	
+	
+	<!--<test name="productingfo test">
+	
+		<classes>
+			<class name="com.qa.opencart.test.ProductinfoproductTest" />
+		</classes>
+	</test>-->
+	
+</suite>
