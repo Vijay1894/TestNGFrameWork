@@ -48,18 +48,4 @@ public class CommonsPage {
 	{
 		return getFootersList().contains(footerlink);
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }
