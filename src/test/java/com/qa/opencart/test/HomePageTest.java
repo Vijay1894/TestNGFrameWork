@@ -57,6 +57,7 @@ public class HomePageTest extends BaseTest {
 	@Test(dataProvider = "getSearchData")
 	public void searchTest(String searchkey , int resultCount) {
 		searchResultpage = homepage.doSearch(searchkey);
+		System.out.println(searchkey);
 		Assert.assertEquals(searchResultpage.getproductResultscount(), resultCount);
 	}
 
