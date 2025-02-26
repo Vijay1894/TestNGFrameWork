@@ -22,7 +22,6 @@ import com.qaautomation.opencart.factory.DriverFactory;
 @Listeners(ChainTestListener.class)
 public class BaseTest {
 	
-	
 	WebDriver driver;
 	DriverFactory df;
 	protected Properties prop;
@@ -37,9 +36,7 @@ public class BaseTest {
 	@BeforeTest
 	public void setup()
 	{
-		
-		
-		df = new DriverFactory();
+		df = new DriverFactory(driver);
 		prop = df.intiprop();
 	    driver = df.intiDriver(prop);
 		loginpage = new LoginPage(driver);

@@ -22,6 +22,11 @@ public class DriverFactory {
 	Properties prop;
 	OptionsManager optionsManager;
 	public static String highlight;
+	
+	public DriverFactory(WebDriver driver)
+	{
+		this.driver = driver;
+	}
 
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
@@ -42,7 +47,7 @@ public class DriverFactory {
 		case "Firefox":
 			tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
 			break;
-		case "Chrome":
+		case "chrome":
 			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
 			// driver = new ChromeDriver(optionsManager.getChromeOptions());
 			break;
@@ -61,8 +66,7 @@ public class DriverFactory {
 	}
 
 	/**
-	 * get Driver useing threadlocal
-	 * 
+	 * get Driver using thread local
 	 * @return
 	 */
 	public static WebDriver getDriver() {
@@ -83,8 +87,7 @@ public class DriverFactory {
 
 	public Properties intiprop() {
 		
-		
-	String envname = 	System.getProperty("env");
+	String envname = System.getProperty("env");
 	System.out.println("running test suite on env: "+ envname);
 	
 	FileInputStream ip = null ;
