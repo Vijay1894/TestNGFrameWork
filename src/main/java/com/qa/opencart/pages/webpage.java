@@ -7,6 +7,8 @@ public class webpage {
 		
 		int i =10;
 		int b = 30;
+		int c = 40;
+			
 		
 
 	}
