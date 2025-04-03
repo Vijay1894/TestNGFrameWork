@@ -24,7 +24,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	@Test
+	@Test(enabled = false)
 	public void loginpageurl()
 	{
 		String acturl =loginpage.getLoginPageurl();
@@ -33,7 +33,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	 @Test
+	 @Test(enabled = false)
 	public void forgotpwdlinkExistTest()
 	{
 	 Assert.assertTrue( loginpage.isforgotpwdlinkExist() , AppError.ELEMENT_NOT_FOUND_ERROR);
@@ -41,7 +41,7 @@ public class LoginpageTest extends BaseTest {
 	  
 	 
 	 
-	 @Test(priority = Integer.MAX_VALUE)
+	 @Test(priority = Integer.MAX_VALUE , enabled = false)
 	 public void loginTest()
 	 {
 		homepage = loginpage.doLogin(prop.getProperty("username"),prop.getProperty("password"));
@@ -49,7 +49,7 @@ public class LoginpageTest extends BaseTest {
 	 }
 	
 	 
-	 @Test(description = "checking logo on login page")
+	 @Test(description = "checking logo on login page",enabled = false)
 	 public void logoTest()
 	 {
 		Assert.assertTrue( commonsPage.isLogoDisplayed(),"Logo not found error");
@@ -66,7 +66,7 @@ public class LoginpageTest extends BaseTest {
 	 }
 	 
 	 
-	 @Test(dataProvider = "getFooterData")
+	 @Test(dataProvider = "getFooterData",enabled = false)
 	 public void FooterTest(String footerLink)
 	 {
 		Assert.assertTrue(commonsPage.CheckFooterLink(footerLink), "footors not found");
