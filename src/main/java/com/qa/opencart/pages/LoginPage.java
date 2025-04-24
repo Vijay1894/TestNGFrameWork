@@ -18,12 +18,12 @@ public class LoginPage {
 	   elementutil = new Elementutil(driver); 
 	}
 	
-	//1. By Locator : Page objects : OR (object Rep )
+	//1. By Locator : Page objects : OR (object Rep)
 
 	private By emailid = By.id("input-email");
 	private By Pwd = By.id("input-password");
 	private By loginbtn = By.xpath("//input[@value='Login']");
-	private By forgotpwd = By.partialLinkText("Forgotten Password1");
+	private By forgotpwd = By.partialLinkText("Forgotten Password");
 	
 	
 	//2. public page actions - Methods (Features )
