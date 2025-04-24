@@ -44,7 +44,7 @@ public class LoginpageTest extends BaseTest {
 	 @Test(priority = Integer.MAX_VALUE , enabled = false)
 	 public void loginTest()
 	 {
-		homepage = loginpage.doLogin(prop.getProperty("username"),prop.getProperty("password"));
+		homepage = loginpage.doLogin(prop.getProperty("username"),System.getProperty("password"));
 		Assert.assertEquals(homepage.getHomePageTitle(), AppConstant.HOME_PAGE_TITLE , AppError.TITLE_NOT_FOUND_ERROR);
 	 }
 	
