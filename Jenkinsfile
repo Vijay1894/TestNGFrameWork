@@ -39,7 +39,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/Vijay1894/TestNGFrameWork.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=rc/test/resources/testRunner/Regression.xml"
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src\test\resources\testRunner\Regression.xml"
                     
                 }
             }
@@ -83,7 +83,7 @@ pipeline
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/Vijay1894/TestNGFrameWork.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testrunner/testng_sanity.xml"
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src\test\resources\testRunner\testng_sanity.xml"
                     
                 }
             }
