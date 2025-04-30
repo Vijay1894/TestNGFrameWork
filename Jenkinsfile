@@ -79,11 +79,11 @@ pipeline
             }
         }
         
-  /*      stage('Sanity Automation Test') {
+       stage('Sanity Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/Vijay1894/TestNGFrameWork.git'
-                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src\test\resources\testRunner\testng_sanity.xml"
+                    sh "mvn clean test -Dsurefire.suiteXmlFiles=src/test/resources/testRunner/testng_sanity.xml"
                     
                 }
             }
@@ -102,7 +102,7 @@ pipeline
                                   reportTitles: ''])
             }
         }
-        */
+        
         
         stage("Deploy to PROD"){
             steps{
