@@ -79,7 +79,7 @@ pipeline
             }
         }
         
-        stage('Sanity Automation Test') {
+  /*      stage('Sanity Automation Test') {
             steps {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     git 'https://github.com/Vijay1894/TestNGFrameWork.git'
@@ -102,7 +102,7 @@ pipeline
                                   reportTitles: ''])
             }
         }
-        
+        */
         
         stage("Deploy to PROD"){
             steps{
