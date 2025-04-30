@@ -4,6 +4,7 @@ package com.qa.opencart.test;
 
 import java.util.Map;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -13,7 +14,7 @@ import org.testng.asserts.SoftAssert;
 import com.aventstack.chaintest.plugins.ChainTestListener;
 import com.qa.opencart.Appconstant.AppConstant;
 import com.qa.opencart.Basepackage.BaseTest;
-import com.qa.opencart.elementutil.ExcelUtil;
+
 
 public class ProductinfoproductTest extends BaseTest {
 	
@@ -71,13 +72,11 @@ public class ProductinfoproductTest extends BaseTest {
 //	   }
     
 	    
-	    @DataProvider
-		   public Object[][] getProductImageSheetData()
-		   {
-			   Object productData[][] =ExcelUtil.getTestData(AppConstant.PRODUCT_SHEET_NAME);	
-			   return productData;
-		   }
-	    
+			/*
+			 * @DataProvider public Object[][] getProductImageSheetData() throws
+			 * InvalidFormatException { Object productData[][]
+			 * =ExcelUtil.getTestData(AppConstant.PRODUCT_SHEET_NAME); return productData; }
+			 */
 	    @Test(dataProvider = "getProductImageSheetData")
 	    public void productImagesCountTest(String searchKey , String productname , int ExpectedImagesCount)
 	    {
