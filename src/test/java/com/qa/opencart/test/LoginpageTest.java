@@ -24,7 +24,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	@Test(enabled = false)
+	@Test
 	public void loginpageurl()
 	{
 		String acturl =loginpage.getLoginPageurl();
