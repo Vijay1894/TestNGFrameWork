@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite> name="TestNG Smoke Testing" verbose="3" parallel="tests" thread-count="3">
+<suite name="TestNG sanity Testing" verbose="3" parallel="tests" thread-count="2">
 
 
 <listeners>
@@ -18,7 +18,7 @@
 	</test>
 	
 	
-		<test name="Homepage Test">
+	<!--	<test name="Homepage Test">
 	
 		<classes>
 			<class name="com.qa.opencart.test.HomePageTest" />

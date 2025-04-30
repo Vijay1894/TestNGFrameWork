@@ -110,7 +110,8 @@
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
 						<suiteXmlFile>
-							src/test/resources/testRunner/Regression.xml</suiteXmlFile>
+							<!--src/test/resources/testRunner/Regression.xml</suiteXmlFile>-->
+							${suiteXmlFile} </suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
