@@ -54,16 +54,10 @@ public class LoginpageTest extends BaseTest {
 	 {
 		Assert.assertTrue( commonsPage.isLogoDisplayed(),"Logo not found error");
 	 }
-	 
-	 @DataProvider
-	 public Object[][] getFooterData()
-	 {
-		 return new Object[] [] 
-				 {
-			 {"About Us"},
-			 {"Contact Us"}
-				 };
-	 }
+		/*
+		 * @DataProvider public Object[][] getFooterData() { return new Object[] [] {
+		 * {"About Us"}, {"Contact Us"} }; }
+		 */
 	 
 	 
 	 @Test(dataProvider = "getFooterData",enabled = false)
