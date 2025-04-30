@@ -127,7 +127,7 @@
 					<reuseForks>true</reuseForks>
 					<suiteXmlFiles>
 					<!-- 	 <suiteXmlFile>src/test/resources/testRunner/Regression.xml</suiteXmlFile>-->
-						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+						 <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
 					</suiteXmlFiles>
 
 					<argLine>
