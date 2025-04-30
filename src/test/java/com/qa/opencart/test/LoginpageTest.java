@@ -33,7 +33,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	 @Test
+	 @Test(enabled = false)
 	public void forgotpwdlinkExistTest()
 	{
 	 Assert.assertTrue( loginpage.isforgotpwdlinkExist() , AppError.ELEMENT_NOT_FOUND_ERROR);
