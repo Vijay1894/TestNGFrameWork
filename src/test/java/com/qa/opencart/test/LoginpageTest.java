@@ -24,7 +24,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	@Test(enabled = true)
+	@Test
 	public void loginpageurl()
 	{
 		String acturl =loginpage.getLoginPageurl();
@@ -41,7 +41,7 @@ public class LoginpageTest extends BaseTest {
 	  
 	 
 	 
-	 @Test(priority = Integer.MAX_VALUE , enabled = false)
+	 @Test(priority = Integer.MAX_VALUE)
 	 public void loginTest()
 	 {
 		homepage = loginpage.doLogin(prop.getProperty("username"),System.getProperty("password"));
