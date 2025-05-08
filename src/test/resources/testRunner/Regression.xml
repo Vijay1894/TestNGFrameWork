@@ -10,15 +10,20 @@
       
 </listeners>
 
-	<test name="LoginPage Test">
 	
+	
+	<test name="LoginPage Test_chrome">
+	<parameter name="browser" value="chrome"> </parameter>
 		<classes>
 			<class name="com.qa.opencart.test.LoginpageTest" />
 		</classes>
 	</test>
 	
 	
+	
+	
 		<test name="Homepage Test">
+		<parameter name="browser" value="chrome"> </parameter>
 	
 		<classes>
 			<class name="com.qa.opencart.test.HomePageTest" />
@@ -26,11 +31,11 @@
 	</test>
 	
 	
-<!--	<test name="productingfo test">
+	<test name="productingfo test">
 	
 		<classes>
 			<class name="com.qa.opencart.test.ProductinfoproductTest" />
 		</classes>
-	</test>-->
+	</test>
 	
 </suite>
