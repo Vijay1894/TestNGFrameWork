@@ -13,6 +13,7 @@
 	<test name="LoginPage Test_chrome_123">
 	<parameter name="browser" value="chrome"> </parameter>
 	<parameter name="browserversion" value="123.0"> </parameter>
+	<parameter name="testname" value="loginPageTest"></parameter>
 		<classes>
 			<class name="com.qa.opencart.test.LoginpageTest" />
 		</classes>
@@ -22,6 +23,8 @@
 	<test name="LoginPage Test_chrome_126">
 	<parameter name="browser" value="chrome"> </parameter>
 	<parameter name="browserversion" value="126.0"> </parameter>
+		<parameter name="testname" value="loginPageTest"></parameter>
+
 		<classes>
 			<class name="com.qa.opencart.test.LoginpageTest" />
 		</classes>
@@ -31,6 +34,8 @@
 	<test name="LoginPage Test_chrome_113">
 	<parameter name="browser" value="chrome"> </parameter>
 	<parameter name="browserversion" value="113.0"> </parameter>
+		<parameter name="testname" value="loginPageTest"></parameter>
+
 		<classes>
 			<class name="com.qa.opencart.test.LoginpageTest" />
 		</classes>

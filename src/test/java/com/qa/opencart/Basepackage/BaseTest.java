@@ -36,10 +36,10 @@ public class BaseTest {
 	
 	
 	
-	@Parameters({"browser","browserversion"})
+	@Parameters({"browser","browserversion","testname"})
 	@BeforeTest(description = "setup: init the driver and properties")
 	
-	public void setup(String browserName , String browserVersion)
+	public void setup(String browserName , String browserVersion, String testName)
 	{
 		df = new DriverFactory(driver);
 		prop = df.intiprop();
@@ -47,6 +47,7 @@ public class BaseTest {
 		{
 			prop.setProperty("browser", browserName);
 			prop.setProperty("browserversion", browserVersion);
+			prop.setProperty("testname", testName);
 			}
 		
 	    driver = df.intiDriver(prop);
