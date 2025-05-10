@@ -66,6 +66,7 @@ public class OptionsManager {
 			Map<String ,Object>selenoidOptions =new HashMap<>();
 			selenoidOptions.put("screenResolution", "1280x1024x24");
 			selenoidOptions.put("enabledVNC", true);
+			
 			co.setCapability("selenoid:options",selenoidOptions );
 			
 			

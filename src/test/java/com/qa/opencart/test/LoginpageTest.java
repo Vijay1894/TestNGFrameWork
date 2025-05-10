@@ -24,7 +24,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	@Test(enabled = false)
+	@Test
 	public void loginpageurl()
 	{
 		String acturl =loginpage.getLoginPageurl();
@@ -33,7 +33,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	 @Test(enabled = false)
+	 @Test
 	public void forgotpwdlinkExistTest()
 	{
 	 Assert.assertTrue( loginpage.isforgotpwdlinkExist() , AppError.ELEMENT_NOT_FOUND_ERROR);
@@ -60,7 +60,7 @@ public class LoginpageTest extends BaseTest {
 		 */
 	 
 	 
-	 @Test(dataProvider = "getFooterData",enabled = false)
+	 @Test(dataProvider = "getFooterData", enabled =false)
 	 public void FooterTest(String footerLink)
 	 {
 		Assert.assertTrue(commonsPage.CheckFooterLink(footerLink), "footors not found");
