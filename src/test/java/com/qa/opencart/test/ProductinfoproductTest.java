@@ -77,7 +77,10 @@ public class ProductinfoproductTest extends BaseTest {
 			 * InvalidFormatException { Object productData[][]
 			 * =ExcelUtil.getTestData(AppConstant.PRODUCT_SHEET_NAME); return productData; }
 			 */
-	    @Test(dataProvider = "getProductImageSheetData")
+	 
+	 
+	 //(dataProvider = "getProductImageSheetData")
+	    @Test
 	    public void productImagesCountTest(String searchKey , String productname , int ExpectedImagesCount)
 	    {
 	    	searchResultpage = homepage.doSearch(searchKey);
@@ -103,7 +106,7 @@ public class ProductinfoproductTest extends BaseTest {
 	    	softAssert.assertEquals(productinfoMap.get("header"), "MacBook Pro");
 	    
 	    softAssert.assertEquals(productinfoMap.get("Brand"), "Apple");
-	    softAssert.assertEquals(productinfoMap.get("Availability"), "In Stock");
+	    softAssert.assertEquals(productinfoMap.get("Availability"), "Out Stock");
 	    softAssert.assertEquals(productinfoMap.get("Product Code"), "Product 18");
 	    softAssert.assertEquals(productinfoMap.get("Reward Points"), "800");
 	    

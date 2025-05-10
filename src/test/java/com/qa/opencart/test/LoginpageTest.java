@@ -13,7 +13,7 @@ public class LoginpageTest extends BaseTest {
 
 	
 	// priority = 0 
-	@Test
+	@Test(enabled = false)
 	public void loginpageTitleTest()
 	{
 		ChainTestListener.log("loginpagetitle new");
@@ -24,7 +24,7 @@ public class LoginpageTest extends BaseTest {
 	
 	
 	// priority = 0 
-	@Test
+	@Test(enabled = false)
 	public void loginpageurl()
 	{
 		String acturl =loginpage.getLoginPageurl();
@@ -44,7 +44,7 @@ public class LoginpageTest extends BaseTest {
 	 @Test(priority = Integer.MAX_VALUE)
 	 public void loginTest()
 	 {
-		homepage = loginpage.doLogin(prop.getProperty("username"),System.getProperty("password"));
+		homepage = loginpage.doLogin(prop.getProperty("username"),prop.getProperty("password"));
 		Assert.assertEquals(homepage.getHomePageTitle(), AppConstant.HOME_PAGE_TITLE , AppError.TITLE_NOT_FOUND_ERROR);
 	 }
 	

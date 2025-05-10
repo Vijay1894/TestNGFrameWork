@@ -44,7 +44,7 @@ public class DriverFactory {
 		
 		switch ((browsername).trim().toLowerCase()) {
 		case "edge":
-			if (remoteExecution)  // run tcs on remote/grid
+			if (remoteExecution)  // run testcase on remote/grid
 			{
 				initRemoteDriver("edge");
 			}

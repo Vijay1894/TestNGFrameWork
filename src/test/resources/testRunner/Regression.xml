@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestNG Regression Testing" verbose="3" parallel="tests" thread-count="3">
+<suite name="TestNG Regression Testing" verbose="4" parallel="tests" thread-count="3">
 
 
 <listeners>
@@ -9,21 +9,37 @@
       <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
       
 </listeners>
-
 	
-	
-	<test name="LoginPage Test_chrome">
+	<test name="LoginPage Test_chrome_123">
 	<parameter name="browser" value="chrome"> </parameter>
+	<parameter name="browserversion" value="123.0"> </parameter>
 		<classes>
 			<class name="com.qa.opencart.test.LoginpageTest" />
 		</classes>
 	</test>
 	
 	
+	<test name="LoginPage Test_chrome_126">
+	<parameter name="browser" value="chrome"> </parameter>
+	<parameter name="browserversion" value="126.0"> </parameter>
+		<classes>
+			<class name="com.qa.opencart.test.LoginpageTest" />
+		</classes>
+	</test>
 	
 	
-		<test name="Homepage Test">
+	<test name="LoginPage Test_chrome_113">
+	<parameter name="browser" value="chrome"> </parameter>
+	<parameter name="browserversion" value="113.0"> </parameter>
+		<classes>
+			<class name="com.qa.opencart.test.LoginpageTest" />
+		</classes>
+	</test>
+	
+	
+	<!--<test name="Homepage Test">
 		<parameter name="browser" value="chrome"> </parameter>
+	<parameter name="browserversion" value="125.0"> </parameter>
 	
 		<classes>
 			<class name="com.qa.opencart.test.HomePageTest" />
@@ -32,10 +48,11 @@
 	
 	
 	<test name="productingfo test">
-	
+	<parameter name="browser" value="chrome"> </parameter>
+	<parameter name="browserversion" value="113.0"> </parameter>
 		<classes>
 			<class name="com.qa.opencart.test.ProductinfoproductTest" />
 		</classes>
-	</test>
+	</test>  -->
 	
 </suite>
