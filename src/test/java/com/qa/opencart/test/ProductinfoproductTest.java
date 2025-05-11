@@ -59,17 +59,19 @@ public class ProductinfoproductTest extends BaseTest {
 	 
 	 
 	    
-//	    @DataProvider
-//	   public Object[][] getProductImageData()
-//	   {
-//		   return new Object[] [] {
-//			   {"Macbook", "MacBook Pro", 4},
-//			   {"macbook", "MacBook Air", 4},
-//			   {"imac", "iMac",3},
-//			   {"samsung", "Samsung SyncMaster 941BW",1},
-//			   {"samsung","Samsung Galaxy Tab 10.1",7}
-//		   };
-//	   }
+   @DataProvider
+   public Object[][] getProductImageData()	   
+   {
+		   return new Object[] [] 
+				   {
+			   {"Macbook", "MacBook Pro", 4},
+			   {"macbook", "MacBook Air", 4},
+			   {"imac", "iMac",3},
+			   {"samsung", "Samsung SyncMaster 941BW",1},
+			   {"samsung","Samsung Galaxy Tab 10.1",7}
+		   };
+   }
+
     
 	    
 			/*
@@ -79,8 +81,8 @@ public class ProductinfoproductTest extends BaseTest {
 			 */
 	 
 	 
-	 //(dataProvider = "getProductImageSheetData")
-	    @Test
+	    
+	    @Test(dataProvider = "getProductImageData")
 	    public void productImagesCountTest(String searchKey , String productname , int ExpectedImagesCount)
 	    {
 	    	searchResultpage = homepage.doSearch(searchKey);
@@ -106,7 +108,7 @@ public class ProductinfoproductTest extends BaseTest {
 	    	softAssert.assertEquals(productinfoMap.get("header"), "MacBook Pro");
 	    
 	    softAssert.assertEquals(productinfoMap.get("Brand"), "Apple");
-	    softAssert.assertEquals(productinfoMap.get("Availability"), "Out Stock");
+	    softAssert.assertEquals(productinfoMap.get("Availability"), "Out Of Stock");
 	    softAssert.assertEquals(productinfoMap.get("Product Code"), "Product 18");
 	    softAssert.assertEquals(productinfoMap.get("Reward Points"), "800");
 	    

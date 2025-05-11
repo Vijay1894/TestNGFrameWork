@@ -12,13 +12,15 @@ import com.qa.opencart.Basepackage.BaseTest;
 public class LoginpageTest extends BaseTest {
 
 	
+	
 	// priority = 0 
-	@Test(enabled = false)
+	@Test
 	public void loginpageTitleTest()
 	{
 		ChainTestListener.log("loginpagetitle new");
 		String acttitle = loginpage.getLoginPageTitle();
 		Assert.assertEquals(acttitle, AppConstant.LOGIN_PAGE_TITLE,AppError.TITLE_NOT_FOUND_ERROR);
+		
 		
 	}
 	
@@ -49,18 +51,24 @@ public class LoginpageTest extends BaseTest {
 	 }
 	
 	 
-	 @Test(description = "checking logo on login page",enabled = false)
+	 @Test(description = "checking logo on login page")
 	 public void logoTest()
 	 {
 		Assert.assertTrue( commonsPage.isLogoDisplayed(),"Logo not found error");
 	 }
-		/*
-		 * @DataProvider public Object[][] getFooterData() { return new Object[] [] {
-		 * {"About Us"}, {"Contact Us"} }; }
-		 */
+		@DataProvider
+       public Object[][] getFooterData()
+		  { 
+			return new Object[] [] 
+					{
+				{"About Us"},
+				{"Contact Us"} 
+				};
+				}
+		
 	 
 	 
-	 @Test(dataProvider = "getFooterData", enabled =false)
+	 @Test(dataProvider = "getFooterData")
 	 public void FooterTest(String footerLink)
 	 {
 		Assert.assertTrue(commonsPage.CheckFooterLink(footerLink), "footors not found");

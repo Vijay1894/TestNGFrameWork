@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="TestNG Regression Testing" verbose="4" parallel="tests" thread-count="3">
+<suite name="TestNG Regression Testing" verbose="4" parallel="tests" thread-count="5">
 
 
 <listeners>
-
-      <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>
-      
+      <listener class-name="com.aventstack.chaintest.plugins.ChainTestListener"/>  
 </listeners>
 	
-	<test name="LoginPage Test_chrome_123">
-	<parameter name="browser" value="chrome"> </parameter>
-	<parameter name="browserversion" value="123.0"> </parameter>
+	<test name="LoginPage Test_chrome">
+	 <parameter name="browser" value="chrome"> </parameter>
+	 <parameter name="browserversion" value="123.0"> </parameter>
 	<parameter name="testname" value="loginPageTest"></parameter>
 		<classes>
 			<class name="com.qa.opencart.test.LoginpageTest" />
@@ -20,7 +18,7 @@
 	</test>
 	
 	
-	<test name="LoginPage Test_chrome_126">
+	 <test name="LoginPage Test_chrome_126">
 	<parameter name="browser" value="chrome"> </parameter>
 	<parameter name="browserversion" value="126.0"> </parameter>
 		<parameter name="testname" value="loginPageTest"></parameter>
@@ -42,19 +40,20 @@
 	</test>
 	
 	
-	<!--<test name="Homepage Test">
+	<test name="Homepage Test_124.0">
 		<parameter name="browser" value="chrome"> </parameter>
-	<parameter name="browserversion" value="125.0"> </parameter>
-	
+	    <parameter name="browserversion" value="124.0"> </parameter>
+	    <parameter name="testname" value="HomepageTest"></parameter>
 		<classes>
 			<class name="com.qa.opencart.test.HomePageTest" />
 		</classes>
 	</test>
 	
 	
-	<test name="productingfo test">
+	<test name="productinfo test">
 	<parameter name="browser" value="chrome"> </parameter>
 	<parameter name="browserversion" value="113.0"> </parameter>
+	<parameter name="testname" value="ProductinfopageTest"></parameter>
 		<classes>
 			<class name="com.qa.opencart.test.ProductinfoproductTest" />
 		</classes>

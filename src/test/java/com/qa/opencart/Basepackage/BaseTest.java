@@ -38,7 +38,6 @@ public class BaseTest {
 	
 	@Parameters({"browser","browserversion","testname"})
 	@BeforeTest(description = "setup: init the driver and properties")
-	
 	public void setup(String browserName , String browserVersion, String testName)
 	{
 		df = new DriverFactory(driver);
