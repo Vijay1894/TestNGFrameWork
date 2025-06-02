@@ -9,16 +9,16 @@
 </listeners>
 	
 	<test name="LoginPage Test_chrome">
-	 <parameter name="browser" value="chrome"> </parameter>
+	<!-- <parameter name="browser" value="chrome"> </parameter>
 	 <parameter name="browserversion" value="123.0"> </parameter>
-	<parameter name="testname" value="loginPageTest"></parameter>
+	<parameter name="testname" value="loginPageTest"></parameter>-->
 		<classes>
 			<class name="com.qa.opencart.test.LoginpageTest" />
 		</classes>
 	</test>
 	
 	
-	 <test name="LoginPage Test_chrome_126">
+	<!--  <test name="LoginPage Test_chrome_126">
 	<parameter name="browser" value="chrome"> </parameter>
 	<parameter name="browserversion" value="126.0"> </parameter>
 		<parameter name="testname" value="loginPageTest"></parameter>

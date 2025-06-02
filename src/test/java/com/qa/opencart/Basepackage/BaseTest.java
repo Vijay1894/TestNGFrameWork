@@ -1,4 +1,4 @@
-package com.qa.opencart.Basepackage;
+	package com.qa.opencart.Basepackage;
 
 import java.util.Properties;
 
@@ -36,18 +36,19 @@ public class BaseTest {
 	
 	
 	
-	@Parameters({"browser","browserversion","testname"})
+	//@Parameters({"browser","browserversion","testname"})
 	@BeforeTest(description = "setup: init the driver and properties")
-	public void setup(String browserName , String browserVersion, String testName)
+	public void setup()
+	//String browserName , String browserVersion, String testName
 	{
 		df = new DriverFactory(driver);
 		prop = df.intiprop();
-		if (browserName!= null)
-		{
-			prop.setProperty("browser", browserName);
-			prop.setProperty("browserversion", browserVersion);
-			prop.setProperty("testname", testName);
-			}
+//		if (browserName!= null)
+//		{
+//			prop.setProperty("browser", browserName);
+			//prop.setProperty("browserversion", browserVersion);
+			//prop.setProperty("testname", testName);
+		//	}
 		
 	    driver = df.intiDriver(prop);
 		loginpage = new LoginPage(driver);
