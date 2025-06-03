@@ -9,6 +9,17 @@ public class Actionpage {
 	 int i = 10;
 	 System.out.println(i);
 	 
+	 System.out.println(i);
+	 System.out.println(i);
+	 System.out.println(i);
+	 System.out.println(i);
+	 
+	 
+	 System.out.println("tags example");
+	 
+	 
+	 
+	 
 	
 	}
 
