@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Properties;
 
+import org.apache.logging.log4j.core.util.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +22,7 @@ import com.qa.opencart.Appconstant.AppConstant;
 import com.qa.opencart.exception.FrameworkException;
 
 public class DriverFactory {
-	WebDriver driver;
+	 WebDriver driver;
 	Properties prop;
 	OptionsManager optionsManager;
 	public static String highlight;
@@ -150,7 +151,7 @@ public class DriverFactory {
 	
 	//supply environment name using maven command line  arguments 
 	// mvn clean install -Denv="qa"--> -D -passing command line 
-	// mvn clean intall
+	// mvn clean install
  	
 
 	public Properties intiprop() {
@@ -204,7 +205,7 @@ public class DriverFactory {
 		return prop;
 	}
 	
-	
+
 	
 	
 	/**

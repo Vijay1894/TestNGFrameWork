@@ -2,9 +2,16 @@ package com.qa.opencart.test;
 
 
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Date;
 import java.util.Map;
 
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.ss.usermodel.WorkbookFactory;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -38,6 +45,12 @@ public class ProductinfoproductTest extends BaseTest {
 				   {"samsung","Samsung Galaxy Tab 10.1"}
 			   };
 		   }
+	    
+	    
+	   
+	    
+	    
+	    
 	    
 	    @Test(dataProvider = "getProductData")
 	    public void productSearchHeaderTest(String searchKey , String productName)
